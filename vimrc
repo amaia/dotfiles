@@ -3,6 +3,8 @@ set nocompatible
 
 silent! call pathogen#runtime_append_all_bundles()
 
+set t_Co=256
+
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 
@@ -52,7 +54,7 @@ nnoremap k gk
 colorscheme railscasts
 
 if $COLORTERM == 'gnome-terminal'
-  set term=gnome-256color
+  "set term=gnome-256color
   colorscheme railscasts
 else
   colorscheme default
