@@ -26,3 +26,5 @@
     df = diff
     lg = log -p
 
+[core]
+	excludesfile = /home/amaia/.gitignore_global
