@@ -27,4 +27,4 @@
     lg = log -p
 
 [core]
-	excludesfile = /home/amaia/.gitignore_global
+	excludesfile = ~/amaia/dotfiles/gitignore_global

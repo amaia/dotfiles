@@ -1,0 +1,22 @@
+PS1="\u@\h:\w $ "
+
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
+if [ -f ~/dotfiles/bash_aliases ]; then
+  . ~/dotfiles/bash_aliases
+fi
+
+if [ -f ~/dotfiles/bashrc_svn_functions ]; then
+  . ~/dotfiles/bashrc_svn_functions
+fi
+
+export SVN_EDITOR=vim
+
+export NODE_PATH="/usr/local/lib/node"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
