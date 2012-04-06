@@ -52,8 +52,16 @@ nnoremap j gj
 nnoremap k gk
 
 
+let mapleader = ","
 
-"let mapleader = ","
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
+set pastetoggle=<F2>
+
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -118,7 +126,8 @@ endif
 if &t_Co > 2 || has("gui_running")
   " Enable syntax highlighting
   syntax on
-  colorscheme railscasts
 endif
 
-
+if &t_Co >= 256 || has("gui_running")
+   colorscheme railscasts
+endif
