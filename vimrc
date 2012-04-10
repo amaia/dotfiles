@@ -34,6 +34,7 @@ set visualbell                    " No beeping.
 
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup  
+set noswapfile
 
 set tabstop=2                    " Global tab width.
 set shiftwidth=2                 " And again, related.
@@ -74,6 +75,7 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
+map <leader>r ggVG=
 
 "You know, for example, that in Normal mode >> and <<  indent and outdent the current line. In Visual mode, a single angle bracket indents and outdents the selected block -- returning you to Normal mode immediately afterward. This can be tiresome if you were hoping to do something else with the selected region.
 "Here's a nugget that will take us the rest of the way: gv starts Visual mode with the previously selected area re-selected. We can use this right in the current editing sesion to create a mapping that solves our problem.
