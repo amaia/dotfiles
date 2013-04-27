@@ -22,7 +22,8 @@ set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 set showmatch
 
-set number
+"set number
+set relativenumber
 set ruler                         " Show cursor position.
 
 set wrap                          " Turn on line wrapping.
@@ -77,6 +78,7 @@ set pastetoggle=<F2>
 
 map <leader>n :NERDTreeToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup=1
+let g:NERDTreeWinSize = 40
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -97,8 +99,20 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" Copy and paste with ctrl-c and ctrl-v
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+
+
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
+
+" Move between windows with alt+arrows
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
 
 "You know, for example, that in Normal mode >> and <<  indent and outdent the current line. In Visual mode, a single angle bracket indents and outdents the selected block -- returning you to Normal mode immediately afterward. This can be tiresome if you were hoping to do something else with the selected region.
 "Here's a nugget that will take us the rest of the way: gv starts Visual mode with the previously selected area re-selected. We can use this right in the current editing sesion to create a mapping that solves our problem.
@@ -164,7 +178,7 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 if &t_Co >= 256 || has("gui_running")
-   colorscheme railscasts
+  colorscheme Tomorrow-Night-Eighties
 endif
 
 

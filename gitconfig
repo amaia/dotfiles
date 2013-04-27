@@ -1,7 +1,6 @@
 [user]
 	email = amaia@amaiac.net
 	name = Amaia Castro
-
 [color]
     ui = auto
 [color "branch"]
@@ -17,14 +16,16 @@
     added = yellow
     changed = green
     untracked = cyan
-
 [alias]
     st = status
     ci = commit
     br = branch
     co = checkout
-    df = diff
+    df = difftool
     lg = log -p
-
+  logg = log --oneline --decorate --graph
+	latest = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short)'
 [core]
 	excludesfile = ~/dotfiles/gitignore_global
+[push]
+  default = current
