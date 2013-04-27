@@ -10,3 +10,5 @@ alias railsdb="rails dbconsole"
 
 alias bserver="bundle exec script/server"
 alias bcon="bundle exec script/console"
+
+alias t="todo.sh"
