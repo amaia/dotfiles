@@ -1,6 +1,9 @@
 
 colorscheme Tomorrow-Night-Eighties
 
+set guifont=Monaco\ 9
+"set guifont=Ubuntu\ Mono\ 11
+
 " Use UTF-8 everywhere.
 set encoding=utf-8
 
