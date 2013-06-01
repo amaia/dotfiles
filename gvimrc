@@ -8,7 +8,7 @@ set guifont=Monaco\ 9
 set encoding=utf-8
 
 " Window dimensions.
-set lines=50 columns=180
+set lines=80 columns=250
 
 " To set the toolbars off (icons on top of the screen)
 set guioptions-=T
